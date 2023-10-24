@@ -1,0 +1,128 @@
+:root {
+
+    /* --slide-opacity:0.5; */
+    --slide-opacity:1;
+    --transition-speed:2s;
+
+}
+.slideshow{
+
+    position:relative;
+
+    /* border:5px solid chartreuse; */
+
+}
+.slide-background{
+
+    /* width:100vw; */
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity:var(--slide-opacity);
+    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgba(0, 255, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    
+    /* border:5px solid red; */
+
+}
+.slide-caption{
+
+    position:absolute;
+
+    top:20%;
+    width:100vw;
+    text-align: center;
+
+    /* top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); */
+
+    /* transition: [property] [duration] [timing-function] [delay]; */
+    /* transition: all .25s ease-in-out; */
+    /* -moz-transition: all .25s ease-in-out; */
+    /* -webkit-transition: all .25s  ease-in-out; */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-slide-caption);
+    font-weight: 900;
+    color: white;
+
+    padding:20px;
+
+    /* z-index: 90; */
+
+    /* background-color: rgba(255,255,255,.8); */
+
+}
+.slide-caption-animation{
+
+    opacity:0;
+    -webkit-opacity: 0;
+
+    animation-name:slideCaption;
+    animation-duration:1s;
+    animation-delay:30ms;
+    /* animation-iteration-count:infinite; */
+    animation-direction:alternate;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    /* animation-play-state:running; */
+
+}
+@keyframes slideCaption {
+
+    /* 0% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    } */
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+    from {
+        transform:scale(0);
+        /* opacity:0; */
+    }
+    to {
+        transform:scale(1);
+        /* opacity:1; */
+    }
+
+}
+
+
+@-webkit-keyframes slideCaption {
+
+    /* 0% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    } */
+
+    0% {
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-opacity: 1;
+    }
+
+    from {
+        transform:scale(0);
+        /* opacity:0; */
+    }
+    to {
+        transform:scale(1);
+        /* opacity:1; */
+    }
+
+}
