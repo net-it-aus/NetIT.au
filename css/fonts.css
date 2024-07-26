@@ -1,0 +1,72 @@
+.font-example{
+    padding:3px;
+    margin:3px;
+    border:1px solid white;
+}
+
+.font-01{font-family:Arial;}
+.font-01:before{content:"Arial";}
+
+.font-02{font-family:Arial Black;}
+.font-02:before{content:"Arial Black";}
+
+.font-03{font-family:Verdana;}
+.font-03:before{content:"Verdana";}
+
+.font-04{font-family:Tahoma;}
+.font-04:before{content:"Tahoma";}
+
+.font-05{font-family:"Trebuchet MS";}
+.font-05:before{content:"Trebuchet MS";}
+
+.font-06{font-family:"Times New Roman";}
+.font-06:before{content:"Times New Roman";}
+
+.font-07{font-family:Georgia;}
+.font-07:before{content:"Georgia";}
+
+.font-08{font-family:Garamond;}
+.font-08:before{content:"Garamond";}
+
+.font-09{font-family:"Courier New";}
+.font-09:before{content:"Courier New";}
+
+.font-10{font-family:"Brush Script MT";}
+.font-10:before{content:"Brush Script MT";}
+
+.font-11{font-family:Helvetica}
+.font-11:before{content:"Helvetica";}
+
+.font-12{font-family:Impact;}
+.font-12:before{content:"Impact";}
+
+.font-13{font-family:"Lucida Console";}
+.font-13:before{content:"Lucida Console";}
+
+.font-14{font-family:"Monaco";}
+.font-14:before{content:"Monaco";}
+
+.font-15{font-family:"Lucida Handwriting";}
+.font-15:before{content:"Lucida Handwriting";}
+
+.font-16{font-family:"Copperplate";}
+.font-16:before{content:"Copperplate";}
+
+.font-17{font-family:"Papyrus";}
+.font-17:before{content:"Papyrus";}
+
+/* To embed a font, copy the code into the <head> of your html */
+/* <link rel="preconnect" href="https://fonts.googleapis.com"> */
+/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */
+/* <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet"> */
+
+.font-18{font-family:"Tilt Warp";}
+.font-18:before{content:" Tilt Warp";}
+.font-19{font-family:"Tilt Warp";color:white;text-shadow: 2px 2px 0px black,-2px -2px 0px black,-2px 2px 0px black,2px -2px 0px black;}
+.font-19:before{content:" Tilt Warp, white";}
+.font-20{font-family:"Tilt Warp";color:orange;}
+.font-20:before{content:" Tilt Warp, orange";}
+.font-21{font-family:"Tilt Warp";font-size:5rem;color:green;}
+.font-21:before{content:" Tilt Warp, 5rem, green";}
+.font-22{font-family:"Tilt Warp";font-size:5rem;color:chartreuse;text-shadow: 2px 2px 0px black,-2px -2px 0px black,-2px 2px 0px black,2px -2px 0px black;}
+.font-22:before{content:" Tilt Warp, 5rem, green";}

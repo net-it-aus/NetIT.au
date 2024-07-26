@@ -1,0 +1,156 @@
+:root {
+    /* chartreuse */
+        --wavyTextShadowR:125; 
+        --wavyTextShadowG:255;  
+        --wavyTextShadowB:0;   
+    /* chartreuse */
+    /* beige */
+        --wavyTextShadowR:245; 
+        --wavyTextShadowG:245;  
+        --wavyTextShadowB:220;   
+    /* beige */
+    --wavyTextShadowOpacity:1;    
+}
+
+.text-animations{
+    border:1px solid white;
+}
+
+.jumping-text{
+    display:flex;
+    align-items: center;
+    /* height:100px; */
+    /* width:100%; */
+    /* border:1px solid red; */
+    /* padding:10px; */
+    border:1px solid white;
+}
+.jumping-text > span{
+    display: flex;
+    align-items: center;
+    font-family:"Source Code Pro",monospace;
+    font-size: 1.5rem;
+    padding:3px;
+    height:1.6rem;
+    /* background-color: yellow; */
+    /* border:1px solid white; */
+}
+.text-that-jumps-css-only{
+    /* translate: x-axis y-axis z-axis|initial|inherit; */
+    translate: 0 -10px;
+    /* color:red; */
+    animation: jumpingText 0.8s ease infinite alternate;
+}
+@keyframes jumpingText{
+    from {translate: 0 0;}
+    to {translate: 0 -5px;}
+}
+
+/* transition-property: opacity;
+transition-duration: 4s;
+transition-delay: 0.1s */
+
+/* =============================================================================================================== */
+/* wavy text */
+.wavy-text-shadow{
+    display:flex;
+    display:none;
+    /* align-items: center; */
+    font-size: 1.5rem;
+    height:1.6rem;
+    /* padding:10px; */
+    border:1px solid white;
+}
+.wavy-text-shadow > span{
+    /* display: inline-block; */
+    /* padding:3px; */
+    /* @keyframes */
+    animation-name:wavyTextShadow;
+    animation-duration:2.5s;
+    /* animation-delay:300ms; */
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function:ease;
+    animation-fill-mode:none;
+    animation-play-state:running;
+    /* animation: bounce 1.3s ease infinite alternate; */
+    /* animation: wavyTextShadow 2.0s ease infinite alternate; */
+
+}
+@keyframes wavyTextShadow{
+    100%{
+      top: -20px;
+      /* text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; */
+      text-shadow: 0 1px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 2px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 3px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)), 
+                   0 4px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB));
+                   /* 0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)),
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)), 
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB)), 
+                   0 5px rgb(var(--wavyTextShadowR),var(--wavyTextShadowG),var(--wavyTextShadowB));  */
+                   /* 0 17px 17px rgba(var(--wavyTextShadowR), var(--wavyTextShadowG), var(--wavyTextShadowB), var(--wavyTextShadowOpacity)); */
+    }
+}
+.wavy-text-shadow span:nth-child(1){
+    animation-delay:0.0s;
+}
+.wavy-text-shadow span:nth-child(2){
+    animation-delay:0.2s;
+}
+.wavy-text-shadow span:nth-child(3){
+    animation-delay:0.4s;
+}
+.wavy-text-shadow span:nth-child(4){
+    animation-delay:0.6s;
+}
+.wavy-text-shadow span:nth-child(5){
+    animation-delay:0.8s;
+}
+.wavy-text-shadow span:nth-child(6){
+    animation-delay:1.0s;
+}
+.wavy-text-shadow span:nth-child(7){
+    animation-delay:1.2s;
+}
+.wavy-text-shadow span:nth-child(8){
+    animation-delay:1.4s;
+}
+.wavy-text-shadow span:nth-child(9){
+    animation-delay:1.6s;
+}
+.wavy-text-shadow span:nth-child(10){
+    animation-delay:1.8s;
+}
+.wavy-text-shadow span:nth-child(11){
+    animation-delay:2.0s;
+}
+.wavy-text-shadow span:nth-child(12){
+    animation-delay:2.2s;
+}
+.wavy-text-shadow span:nth-child(13){
+    animation-delay:2.4s;
+}
+.wavy-text-shadow span:nth-child(14){
+    animation-delay:2.6s;
+}
+.wavy-text-shadow span:nth-child(15){
+    animation-delay:2.8s;
+}
+.wavy-text-shadow span:nth-child(16){
+    animation-delay:3.0s;
+}
+.wavy-text-shadow span:nth-child(17){
+    animation-delay:3.2;
+}
+/* wavy text */
+/* =============================================================================================================== */

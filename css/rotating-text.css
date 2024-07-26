@@ -1,0 +1,218 @@
+:root{
+    --width1:13px;
+    --width2:13px;
+    --width3:13px;
+    --top1: 0;
+    --top2: 0;
+    --top3: 0;
+    --angle1: 190px;
+    --angle2: 190px;
+    --angle3: 190px;
+}
+
+.text-animations{
+    border:1px solid white;
+}
+
+/* =========================================================================================================================== */
+.rotating-text-1{
+    display:flex;
+    /* padding:13px; */
+}
+.rotating-text-1-panel{
+    position:relative;
+    width:var(--width1);
+    height:1.6rem;
+    /* border: 1px solid chartreuse; */
+    /* background-color: rgba(255,255,255,.2); */
+    overflow:hidden;
+    /* animation:rotatingText1 6s infinite ease-in-out; */
+}
+@keyframes rotatingText1 {
+    0%, 10% {transform: rotateX(0deg);}
+    90%, 100% {transform: rotateX(360deg);}
+}
+.rotating-text-1-panel > div{
+    position:absolute;
+    font-size:1.5rem;
+    font-family: monospace;
+}
+
+/* =========================================================================================================================== */
+.rotating-text-2-container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:minmax(100px,auto);
+    /* background-color: aqua; */
+}
+.rotating-text-2{
+    /* position:relative; */
+    display:flex;
+}
+.rotating-text-2-panel{
+    position:absolute;
+    position:relative;
+    /* transform: translate(-50%,-50%), rotateY(--angle), translateZ(190px); */
+    width:var(--width2);
+    height:100px;
+    border: 1px solid chartreuse;
+    overflow:hidden;
+    /* animation:rotatingText 6s infinite ease-in-out; */
+}
+@keyframes rotatingText2 {
+    0%, 10% {transform: rotateX(0deg);}
+    90%, 100% {transform: rotateX(360deg);}
+}
+.rotating-text-2-panel > div{
+    position:absolute;
+    font-size:5rem;
+    font-family: monospace;
+}
+/* =========================================================================================================================== */
+.colorful-text-1-container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:minmax(100px,auto);
+    /* background-color: aqua; */
+}
+.colorful-text-1{
+    /* position:relative; */
+    display:flex;
+    /* padding:13px; */
+}
+.colorful-text-1-panel{
+    position:absolute;
+    position:relative;
+    /* transform: translate(-50%,-50%), rotateY(--angle), translateZ(190px); */
+    width:var(--width2);
+    height:1.6rem;
+    /* border: 1px solid chartreuse; */
+    overflow:hidden;
+    /* animation:rotatingText 6s infinite ease-in-out; */
+}
+/* @keyframes rotatingText2 {
+    0%, 10% {transform: rotateX(0deg);}
+    90%, 100% {transform: rotateX(360deg);}
+} */
+.colorful-text-1-panel > div{
+    position:absolute;
+    font-size:1.5rem;
+    font-family: monospace;
+}
+/* =========================================================================================================================== */
+.vertical-text-1{
+    display:flex;
+    position:absolute;
+    gap:1px;
+    writing-mode:vertical-lr;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: white;
+    /* z-index: 99; */
+}
+.vertical-text-1-panel{
+    /* flex-flow:column; */
+    padding-left:10px;
+    padding-right:10px;
+    color:navy;
+}
+/* =========================================================================================================================== */
+.vertical-text-2{
+    display:flex;
+    gap:0px;
+    writing-mode:vertical-rl;
+    flex-direction: column;
+    background-color: white;
+    padding:10px;
+}
+.vertical-text-2-panel{
+    /* display:flex; */
+    /* flex-flow:column; */
+    /* padding-top:10x; */
+    color:navy;
+}
+/* =========================================================================================================================== */
+
+/* increasing text size ============================================================================================ */
+.increasing-text-size-container{
+    min-height:1.6rem;
+    /* max-width:max-content; */
+    /* margin-left:45px; */
+    /* margin-left:45px; */
+    /* border:1px solid yellow; */
+}
+.increasing-text-size{
+    font-size: 1.5rem;
+    /* display:inline-block; */
+    /* position:relative; */
+    min-height:1.6rem;
+    /* max-width: max-content; */
+    /* margin:auto; */
+    /* margin-left:45px; */
+    opacity: 1;
+    padding-left: 3px;
+    padding-right: 3px;
+    pointer-events: none;
+
+    animation-name:increasing-text-size;
+    animation-duration:1s;
+    /* animation-timing-function:; */
+    animation-delay:.1s;
+    animation-iteration-count:4;
+    animation-direction:alternate-reverse;
+    animation-fill-mode:both;
+
+}
+
+   @keyframes increasing-text-size {
+    from {
+        transform:scale(0);
+        /* opacity:0; */
+    }
+    to {
+        transform:scale(1);
+        /* opacity:1; */
+    }
+    /* from {
+        transform:translateX(0px);
+    }
+    to {
+        transform:translateX(200px);
+    } */
+    /* from {font-size: .1em;}
+    to {font-size: 1.5em;} */
+    /* 0%  {
+        font-size: .1em;
+        }
+    10% {
+        font-size: .1em;
+        }
+    20% {
+        font-size: .2em;
+        }
+    30% {
+        font-size: .3em;
+        }
+    40% {
+        font-size: .4em;
+        }
+    50% {
+        font-size: .5em;
+        }
+    60% {
+        font-size: .6em;
+        }
+    70% {
+        font-size: .7em;
+        }
+    80% {
+        font-size: .8em;
+        }
+    90% {
+        font-size: .9em;
+        }
+    100% {
+        font-size: 1em;
+    } */
+}
+/* increasing text size ============================================================================================ */
