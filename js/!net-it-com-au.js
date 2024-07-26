@@ -28,7 +28,8 @@ function populateCopyrightNotice(){
   // var dt1 = dt.toLocaleString().slice(6,10);
   var dt1 = dt.getFullYear();
   // document.getElementById("copyright-notice").innerHTML =  `<span class="material-icons material-icons">copyright</span><br>&copy all rights reserved 2019-${dt1}`;
-  document.getElementById("copyright-notice").innerHTML =  '<span class="material-icons material-icons">copyright</span><br>&copy Net IT Australia ' + dt1;
+  // document.getElementById("copyright-notice").innerHTML =  '<span class="material-icons material-icons">copyright</span><br>&copy Net IT Australia ' + dt1;
+  document.getElementById("copyright-notice").innerHTML =  '&copy Net IT Australia ' + dt1;
 }
 
 window.addEventListener("load",  (event) => {

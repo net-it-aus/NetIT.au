@@ -22,43 +22,8 @@ if (v_portNumber == undefined) {
 // const fs = require('fs');
 import fs from 'fs';
 
-// // NODEOUTLOOK - START ================================================================================================
-//     // nodemailer initialise - start
-//         // var nodeoutlook = require('nodejs-nodemailer-outlook')
-        import nodeoutlook from 'nodejs-nodemailer-outlook';
-//         nodeoutlook.sendEmail({
-//             auth: {
-//                 user: "Net.IT.Australia@outlook.com",
-//                 pass: "SonicBroom.000"
-//             },
-//             from: '"No-Reply email from Net It Australia" <Net.IT.Australia@outlook.com>',
-//             to: 'd.garton@outlook.com',
-//             subject: 'Hey you, awesome!',
-//             html: '<b>This is bold text</b>',
-//             // text: 'This is text version!',
-//             replyTo: 'NoReply@outlook.com',
-//             // attachments: [
-//             //                     {
-//             //                         filename: 'text1.txt',
-//             //                         content: 'hello world!'
-//             //                     },
-//             //                     {   // file on disk as an attachment
-//             //                         filename: 'text3.txt',
-//             //                         path: '/path/to/file.txt' // stream this file
-//             //                     },
-//             //                     {   // filename and content type is derived from path
-//             //                         path: '/path/to/file.txt'
-//             //                     },
-//             //                     {   // use URL as an attachment
-//             //                         filename: 'license.txt',
-//             //                         path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
-//             //                     },
-//             //                 ],
-//             onError: (e) => console.log(e),
-//             onSuccess: (i) => console.log(i)
-//         });
-//     // nodemailer initialise - end
-// // NODEOUTLOOK - END  =================================================================================================
+// var nodeoutlook = require('nodejs-nodemailer-outlook')
+import nodeoutlook from 'nodejs-nodemailer-outlook';
 
 //  tell the express server to host static files in the 'public' folder
     app.use(express.static('public'));
@@ -432,167 +397,56 @@ app.post('/commsGetCheck',(req,res) => {
 });
 // TEST COMMS end /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
-// // ATO RSS subscription email START
-//     // const intervalID = setInterval(retrieveATOrss, 1000 * 10);
-//     // const intervalID1 = setInterval(retrieveATOrss, 1000 * 60 * 60 * 24);
-//     // const intervalID = setInterval(retrieveATOrss, 86400000);
-//     async function retrieveATOrss(){
-//         await fetch('https://www.ato.gov.au/rss.aspx?category=145')    
-//         .then(res => {
-//             // using await to ensure that the promise resolves
-//             // console.log('/retrieveATOrss:- res.text:- ',res);
-//             // console.log('/retrieveATOrss:- res.text:- ',res.text);
-//             return res.text();
-//         })
-//         .then(res_xml => {
-//             // console.log('retrieveATOrss:- res_xml:- \n',res_xml);
-//             // res.send(res_xml);
-//             // res.end();
-//             let i,j;
-//             let itemCount=0;
-//             let res_html = "";
-//             console.log('retrieveATOrss:- res_xml.length:- ',res_xml.length);
-//             // console.log('\n');
-//             for (i=0; i<res_xml.length;i++){
-//                 if (res_xml.slice(i,i+7)==="<title>"){
-//                     for (j=i;j<res_xml.length;j++){
-//                         if (res_xml.slice(j,j+8)==="</title>"){
-//                             // console.log("ATO update");
-//                             // console.log("TITLE:- " + res_xml.slice(i+7,j));
-//                             res_html += "<br>ATO update<br>";
-//                             res_html += "TITLE:- " + res_xml.slice(i+7,j) + "<br>";
-//                             i=j;
-//                             break;
-//                         }
-//                     }
-//                 } else if (res_xml.slice(i,i+6)==="<link>"){
-//                     for (j=i;j<res_xml.length;j++){
-//                         if (res_xml.slice(j,j+7)==="</link>"){
-//                             // console.log("LINK:- " + res_xml.slice(i+6,j));
-//                             res_html += `LINK:- <a href="${res_xml.slice(i+6,j)}" style="color:chartreuse;">` + res_xml.slice(i+6,j) + `</a><br>`;
-//                             i=j;
-//                             break;
-//                         }
-//                     }
-//                 } else if (res_xml.slice(i,i+13)==="<description>"){
-//                     for (j=i;j<res_xml.length;j++){
-//                         if (res_xml.slice(j,j+14)==="</description>"){
-//                             // console.log("DESCRIPTION:- " + res_xml.slice(i+13,j));
-//                             res_html += "DESCRIPTION:- " + res_xml.slice(i+13,j) + "<br>";
-//                             i=j;
-//                             break;
-//                         }
-//                     }
-//                 } else if (res_xml.slice(i,i+9)==="<pubDate>"){
-//                     for (j=i;j<res_xml.length;j++){
-//                         if (res_xml.slice(j,j+10)==="</pubDate>"){
-//                             // console.log("PUBLISHED:- " + res_xml.slice(i+9,j));
-//                             // console.log("");
-//                             if (itemCount===0){
-//                                 res_html += "Created by NET IT Australia:- " + res_xml.slice(i+9,j) + "<br>";
-//                             } else {
-//                                 res_html += "PUBLISHED:- " + res_xml.slice(i+9,j) + "<br>";
-//                             }
-//                             // res_html += "<br>";
-//                             i=j;
-//                             itemCount += 1;
-//                             break;
-//                         }
-//                     }
-//                 }
-//             }
-//             // console.log(res_html);
-//             nodeoutlook.sendEmail({
-//                 auth: {
-//                     user: "Net.IT.Australia@outlook.com",
-//                     pass: "SonicBroom.000"
-//                 },
-//                 // from: '"No-Reply email from Net It Australia" <Net.IT.Australia@outlook.com>',
-//                 from: '"Net.IT.Australia@outlook.com',
-//                 to: 'support@netit.com.au',
-//                 // bcc: 'd.garton@outlook.com.au;donald@bgfinancial.net.au;stephen@bgfinancial.net.au;Railesh@bgfinancial.net.au;charlotte@bgfinancial.net.au;grace@bgfinancial.net.au;faye@bgfinancial.net.au;felicia@bgfinancial.net.au;peter@bgfinancial.net.au',
-//                 subject: 'update from Net IT Australia',
-//                 // html: JSON.stringify(req.body.emailBody),
-//                 html: res_html,
-//                 text: 'This is text version!',
-//                 replyTo: 'support@netit.com.au',
-//                 onError: (e) => console.log(e),
-//                 // onSuccess: (i) => console.log(i)
-//                 onSuccess: (i) => console.log("ATO RSS email sent OK\n")
-//             });
-        
-//         });
+// // same time daily START
+//     setInterval(go, 1000 * 60);
+//     // setInterval(go, 1000 * 60 * 0.1);
+//     function go() {
+//         doThisDaily(17,30);
+//         // doThisDaily(4,30);
 //     }
-//     // retrieveATOrss();
-//     const date0 = new Date();
-//     const date0Time = date0.getTime();
-//     // const date0TimeAdjusted = date0Time.setHours();
-//     const date1 = new Date("2023-07-10T00:05:00Z");
-//     const date1Time = date1.getTime();
-//     // console.log("date",new Date());
-//     // console.log("date0",date0);
-//     // console.log("date1",date1);
-//     // console.log("date0Time",date0Time);
-//     // console.log("date1Time",date1Time);
-//     const timeDelay = date1Time - date0Time;
-//     // console.log("time delay in minutes",(date1Time - date0Time) / 60 / 60 / 24);
-//     setTimeout(() =>{
-//         retrieveATOrss();
-//         const intervalID1 = setInterval(retrieveATOrss, 1000 * 60 * 60 * 24);
-//     },
-//     timeDelay)
-// // ATO RSS subscription email END
+//     function doThisDaily(hh,mm){
 
-// same time daily START
-    setInterval(go, 1000 * 60);
-    // setInterval(go, 1000 * 60 * 0.1);
-    function go() {
-        doThisDaily(17,30);
-        // doThisDaily(4,30);
-    }
-    function doThisDaily(hh,mm){
+//         // console.log('target hh:- ',hh,'target mm:- ',mm,'target minutes:- ',hh * 60 + mm);
 
-        // console.log('target hh:- ',hh,'target mm:- ',mm,'target minutes:- ',hh * 60 + mm);
+//         // let timeNow = Date.now();
+//         let timeNow = new Date();
+//         // console.log('1. timeNow:- ',timeNow);
+//         // console.log('1. timeNow.toString():- ',timeNow.toString());
+//         let timeNowLocal = new Date(timeNow - new Date().getTimezoneOffset());
+//         // console.log('2. timeNowLocal:- ',timeNowLocal);
+//         // console.log('2. timeNowLocal.toString():- ',timeNowLocal.toString());
+//         let timeNowMinutes = timeNow.getHours() * 60 + timeNow.getMinutes();
+//         // console.log('timeNowMinutes:- ',timeNowMinutes);
+//         let timeNowLocalMinutes = timeNowLocal.getHours() * 60 + timeNowLocal.getMinutes();
+//         // console.log('timeNowLocalMinutes:- ',timeNowLocalMinutes);
+//         // console.log(timeNowLocal - timeNow);
+//         // console.log(timeNowLocalMinutes - timeNowMinutes);
 
-        // let timeNow = Date.now();
-        let timeNow = new Date();
-        // console.log('1. timeNow:- ',timeNow);
-        // console.log('1. timeNow.toString():- ',timeNow.toString());
-        let timeNowLocal = new Date(timeNow - new Date().getTimezoneOffset());
-        // console.log('2. timeNowLocal:- ',timeNowLocal);
-        // console.log('2. timeNowLocal.toString():- ',timeNowLocal.toString());
-        let timeNowMinutes = timeNow.getHours() * 60 + timeNow.getMinutes();
-        // console.log('timeNowMinutes:- ',timeNowMinutes);
-        let timeNowLocalMinutes = timeNowLocal.getHours() * 60 + timeNowLocal.getMinutes();
-        // console.log('timeNowLocalMinutes:- ',timeNowLocalMinutes);
-        // console.log(timeNowLocal - timeNow);
-        // console.log(timeNowLocalMinutes - timeNowMinutes);
+//         if (timeNowMinutes === hh * 60 + mm){
+//             let executionTime = new Date();
+//             console.log('\n');
+//             console.log('executionTime.toLocaleTimeString():- ',executionTime.toLocaleTimeString());
+//             console.log('executionTime.getDay():- ',executionTime.getDay());
+//             // console.log('executionTime.toTimeString():- ',executionTime.toTimeString());
+//             // console.log('executionTime.toUTCString():- ',executionTime.toUTCString());
+//             // console.log('\n');
+//             // send ATO RSS emails only on weekdays START
+//                 if (executionTime.getDay() === 0){
+//                 } else if (executionTime.getDay() === 6){
+//                 } else {
+//                     sendATOrssALLupdate();
+//                 }
+//             // send ATO RSS emails only on weekdays END
+//         }
 
-        if (timeNowMinutes === hh * 60 + mm){
-            let executionTime = new Date();
-            console.log('\n');
-            console.log('executionTime.toLocaleTimeString():- ',executionTime.toLocaleTimeString());
-            console.log('executionTime.getDay():- ',executionTime.getDay());
-            // console.log('executionTime.toTimeString():- ',executionTime.toTimeString());
-            // console.log('executionTime.toUTCString():- ',executionTime.toUTCString());
-            // console.log('\n');
-            // send ATO RSS emails only on weekdays START
-                if (executionTime.getDay() === 0){
-                } else if (executionTime.getDay() === 6){
-                } else {
-                    sendATOrssALLupdate();
-                }
-            // send ATO RSS emails only on weekdays END
-        }
-
-    }
-    // let myTime = new Date();
-    // console.log(myTime.toLocaleTimeString().slice(0,5),myTime.toLocaleTimeString().slice(9,11));
-    // console.log(myTime.toLocaleTimeString().slice(0,2));
-    // console.log(myTime.toLocaleTimeString().slice(3,5));
-    // console.log(myTime.toLocaleTimeString().slice(9,11));
-    // console.log('hh:- ',myTime.getHours(),'mm:- ',myTime.getMinutes());
-// same time daily END
+//     }
+//     // let myTime = new Date();
+//     // console.log(myTime.toLocaleTimeString().slice(0,5),myTime.toLocaleTimeString().slice(9,11));
+//     // console.log(myTime.toLocaleTimeString().slice(0,2));
+//     // console.log(myTime.toLocaleTimeString().slice(3,5));
+//     // console.log(myTime.toLocaleTimeString().slice(9,11));
+//     // console.log('hh:- ',myTime.getHours(),'mm:- ',myTime.getMinutes());
+// // same time daily END
 
 // ATO RSS ALL email service START
     async function sendATOrssALLupdate(){
@@ -822,27 +676,27 @@ app.post('/commsGetCheck',(req,res) => {
     // timeDelay)
 // ATO RSS ALL email service END
 
-// isServerRunning() START
-    const intervalID2 = setInterval(isServerRunning, 1000 * 60 * 60);
-    async function isServerRunning(){
-        var started = Date().slice(0, 25);
-        await nodeoutlook.sendEmail({
-            auth: {
-                user: "Net.IT.Australia@outlook.com",
-                pass: "SonicBroom.000"
-            },
-            // from: '"No-Reply email from Net It Australia" <Net.IT.Australia@outlook.com>',
-            from: '"Net.IT.Australia@outlook.com',
-            to: 'support@netit.com.au',
-            // bcc: 'd.garton@outlook.com.au;donald@bgfinancial.net.au',
-            subject: 'Net IT Australia Server is running',
-            // html: JSON.stringify(req.body.emailBody),
-            html: `<p>Net IT Australia Server is running. ${started}</p>`,
-            text: 'This is text version!',
-            replyTo: 'support@netit.com.au',
-            onError: (e) => console.log(e),
-            // onSuccess: (i) => console.log(i)
-            onSuccess: (i) => console.log(`Email sent:- "message from Net IT Australia Server"<p>Server is running. ${started}</p>`)
-        });
-    }
-// isServerRunning() END
+// // isServerRunning() START
+//     const intervalID2 = setInterval(isServerRunning, 1000 * 60 * 60);
+//     async function isServerRunning(){
+//         var started = Date().slice(0, 25);
+//         await nodeoutlook.sendEmail({
+//             auth: {
+//                 user: "Net.IT.Australia@outlook.com",
+//                 pass: "SonicBroom.000"
+//             },
+//             // from: '"No-Reply email from Net It Australia" <Net.IT.Australia@outlook.com>',
+//             from: '"Net.IT.Australia@outlook.com',
+//             to: 'support@netit.com.au',
+//             // bcc: 'd.garton@outlook.com.au;donald@bgfinancial.net.au',
+//             subject: 'Net IT Australia Server is running',
+//             // html: JSON.stringify(req.body.emailBody),
+//             html: `<p>Net IT Australia Server is running. ${started}</p>`,
+//             text: 'This is text version!',
+//             replyTo: 'support@netit.com.au',
+//             onError: (e) => console.log(e),
+//             // onSuccess: (i) => console.log(i)
+//             onSuccess: (i) => console.log(`Email sent:- "message from Net IT Australia Server"<p>Server is running. ${started}</p>`)
+//         });
+//     }
+// // isServerRunning() END
