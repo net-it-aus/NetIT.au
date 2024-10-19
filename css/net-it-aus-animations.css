@@ -1,0 +1,152 @@
+/* <!-- collapse all     Ctrl + k + 0 --> */
+/* <!-- expand all       Ctrl + k + j --> */
+/* <!-- format           Alt + Shift + F (USE WITH CAUTION)--> */
+/* <!-- word wrap toggle Alt + z --> */
+
+/*  HTML DIV showing that my CSS add-in is loaded */
+.css-animations{
+    position:fixed;
+    bottom:0;
+    right:0;
+    color:black;
+}
+/*  HTML DIV showing that my CSS add-in is loaded */
+
+.scroll-watcher{
+    height:5px;
+    position:fixed;
+    top:0;
+    z-index: 101;
+    background-color: black;
+    width:100%;
+    scale: 0 1;
+    transform-origin: left;
+    /* 1) animation-name 2) animation-duration 3) animation-timing-function 4) animation-delay 5) animation-iteration-count 6) animation-direction 7) animation-fill-mode */
+    animation-name: scrollWatcher;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
+}
+@keyframes scrollWatcher{
+    to {scale: 1 1;}
+}
+
+.global-button-animation{
+    /* 1) animation-name 2) animation-duration 3) animation-timing-function 4) animation-delay 5) animation-iteration-count 6) animation-direction 7) animation-fill-mode */
+    animation: buttonClick_Scale_Wobble 0.25s ease 0s 1 normal;
+    -webkit-animation: buttonClick_Scale_Wobble 0.25s ease 0s 1 normal;
+    /* animation-name: buttonClick_Scale_Wobble; */
+    /* animation-duration: 0.25s; */
+    /* animation-timing-function:ease; */
+        /* linear ease ease-in ease-out ease-in-out cubic-bezier(n,n,n,n) */ 
+    /* animation-delay: 0s; */
+    /* animation-iteration-count: 1; */
+    /* animation-direction: normal; */
+        /* normal reverse alternate alternate-reverse */
+    /* animation-fill-mode: none; */
+        /* none forwards backwards both */
+}
+@keyframes buttonClick_Scale_Wobble {
+    0%   {rotate: 2.5deg; scale:1.3;background-color:black;}
+    25%  {rotate: -2.5deg;scale:1.2;background-color:white;}
+    50%  {rotate: 2.5deg;scale:1.2;background-color:black;}
+    75%  {rotate: -2.5deg;scale:1.1;background-color:white;}
+    100% {rotate: 0deg;scale:1.0;background-color:black;}
+}
+
+.rainbow-background-colours{
+    animation: 
+        rainbowTransition01 2s linear 0s 1 normal,
+        rainbowTransition02 2s linear 2s 1 normal,
+        rainbowTransition03 2s linear 4s 1 normal,
+        rainbowTransition04 2s linear 6s 1 normal,
+        rainbowTransition05 2s linear 8s 1 normal,
+        rainbowTransition06 2s linear 10s 1 normal,
+        rainbowTransition07 2s linear 12s 1 normal forwards;
+    /* -webkit-animation: rainbowBackgroundColours 12s linear 0s infinite normal; */
+}
+
+@keyframes rainbowTransition01 {
+    from {background-color: hsl(0, 100%, 50%);opacity:50%;}
+    to {background-color: hsl(60, 100%, 50%);opacity:50%;}
+}
+@keyframes rainbowTransition02 {
+    from {background-color: hsl(60, 100%, 50%);opacity:50%;}
+    to {background-color: hsl(120, 100%, 50%);opacity:50%;}
+}
+@keyframes rainbowTransition03 {
+    from {background-color: hsl(120, 100%, 50%);opacity:50%;}
+    to {background-color: hsl(180, 100%, 50%);opacity:50%;}
+}
+@keyframes rainbowTransition04 {
+    from {background-color: hsl(180, 100%, 50%);opacity:50%;}
+    to {background-color: hsl(240, 100%, 50%);opacity:50%;}
+}
+@keyframes rainbowTransition05 {
+    from {background-color: hsl(240, 100%, 50%);opacity:50%;}
+    to {background-color: hsl(300, 100%, 50%);opacity:50%;}
+}
+@keyframes rainbowTransition06 {
+    from {background-color: hsl(300, 100%, 50%);opacity:50%;}
+    to {background-color: hsl(360, 100%, 50%);opacity:50%;}
+}
+@keyframes rainbowTransition07 {
+    0% {background-color: hsl(360, 100%, 50%);opacity:50%;}
+    33% {background-color: hsl(360, 100%, 50%);opacity:15%;}
+    66% {background: linear-gradient(to top right,
+        hsl(0, 100%, 50%),
+        hsl(60, 100%, 50%),
+        hsl(120, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(240, 100%, 50%),
+        hsl(300, 100%, 50%));
+    ;opacity:15%;}
+    100% {background: linear-gradient(to top right,
+        hsl(0, 100%, 50%),
+        hsl(60, 100%, 50%),
+        hsl(120, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(240, 100%, 50%),
+        hsl(300, 100%, 50%));
+    ;opacity:100%;}
+}
+
+/* START parallax parallax parallax parallax parallax parallax parallax parallax START */
+#parallax-section{
+    /* height: 100vh; */
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+.parallax-wrapper{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+}
+.parallax::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+.parallax-static{
+    background: red;
+}
+.parallax-bg1::after{
+    background-image: url("../media-partial/1-lindfield-avenue-front.png");
+    background-size: cover;
+}
+.parallax-bg2::after{
+    background-image: url("../media-partial/1-lindfield-avenue-corner.png");
+    background-size: cover;
+}
+/* END parallax parallax parallax parallax parallax parallax parallax parallax END */

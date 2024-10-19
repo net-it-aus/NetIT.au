@@ -1,198 +1,304 @@
+<!-- collapse all     Ctrl + k + 0 -->
+<!-- expand all       Ctrl + k + j -->
+<!-- format           Alt + Shift + F (USE WITH CAUTION)-->
+<!-- word wrap toggle Alt + z -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
 
-    <!-- SEO -->
-        <title>Net IT Australia</title>
-        <meta nme="description" content="client staging site, by Net IT Australia web developer.">
-        <meta name="author" content="Net IT Australia" />
-        <meta name="google" content="nositelinkssearchbox">
-        <meta name="googlebot" content="notranslate">
-        <!-- Use meta robots tags only when you want to restrict the way GOOGLE crawls a page; -->
-        <meta name="robots" content="index, follow">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- SEO -->
-
-    <link rel="icon" type="image/png" href="favicon_green.png"/>
-    <link rel="shortcut icon" type="image/png" href="favicon_green.png"/>
-
-    <link rel="stylesheet" href="!net-it-com-au.css" type="text/css">
-
-    <script type="text/javascript" src="!net-it-com-au.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+        <!-- SEO -->
+            <title>invoice capture</title>
+            <meta nme="description" content="invoice-capture">
+            <!-- Use meta robots tags only when you want to restrict the way GOOGLE crawls a page; -->
+            <meta name="robots" content="index, follow">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="title" content="invoice-capture">
+        <!-- SEO -->
     
-</head>
+        <!-- <link rel="stylesheet" href="./css/net-it-aus-animations.css" type="text/css">
+        <script src="./js/net-it-aus-animations.js" type="text/JavaScript"></script> -->
 
-<body>
+        <!-- <script src="./js/invoice-capture.js" type="text/JavaScript" defer></script> -->
+        <script src="invoice-capture.js" type="text/JavaScript" defer></script>
+    
+        <!-- <link rel="stylesheet" href="./css/invoice-capture.css" media="all" type="text/css"> -->
+        <link rel="stylesheet" href="invoice-capture.css" media="all" type="text/css">
+            
+        <!-- <link rel="icon" type="image/png" href="./media-partial/dollar_sign.png"/> -->
+        <link rel="icon" type="image/png" href="dollar_sign.png"/>
 
-<div class="site-content-wrapper">
+    </head>
+    <body>
 
-    <header>
-        <div class="entity-name">
-            <h1 style="text-shadow: 2px 2px navy">Client Staging Site</h1>
-            <h4>Client sites that are under construction will be found here.</h4>
-            <br>
-            <br>
-            <!-- <h3>by Net IT Australia</h3> -->
-        </div>
-        <!-- <div id="current-date-time" class="current-date-time">
-            <span id="current-date-time-span"></span>
+        <!-- <div id="pre-header">
+            <div id="net-it-aus-addin" class="css-animations"></div>
         </div> -->
-        <div class="header-nav-container">
-            <nav class="header-nav">
-                <!-- menu -->
-            </nav>
-        </div>
-    </header>
-    <main class="site-content-main">
 
-        <!-- <section class="marketing-deck-01">
-            <h2>Why you need a bespoke web site</h2>
-            <a href="https://www.forbes.com/sites/theyec/2020/02/03/why-every-business-needs-a-website/?sh=44c8e64a6e75" target="_blank" ><button><xh2><i><u>...according to Forbes</i></u></xh2></button></a>
-        </section> -->
+        <div class="scroll-watcher"></div>
 
-        <!-- <section class="section-flip-tiles"> -->
-            <!-- <div class="flip-tiles-container">
-                <div id="flip-tile-1of6" class="flip-tile opacity1">
-                    <div class="flip-tile-inner">
-                        <div class="flip-tile-front">
-                            <img src="trust.jpeg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
-                            <h2>Credibility</h2>
-                        </div>
-                        <div class="flip-tile-back">
-                            <h3>Credibility</h3> 
-                            One of the main reasons you should have a website for your business is to increase your organization's credibility. Chances are there are several providers offering a similar service to yours. One way you can stand out is by having a website that looks good and clearly communicates quality information to your consumers.
-                            Without a website, people may question your legitimacy as a business. Having a website is an opportunity to make a great first impression and give people comfort that you’re a real business.
-                        </div>
-                    </div>
-                </div>          
-                <div id="flip-tile-2of6" class="flip-tile opacity1">
-                    <div class="flip-tile-inner">
-                        <div class="flip-tile-front">
-                            <img src="brand-awareness.jpeg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
-                            <h2>Brand Awareness</h2> 
-                        </div>
-                        <div class="flip-tile-back">
-                            <h3>Brand Awareness</h3> 
-                            Showcasing your brand to your prospective customers is one of the most important things that you can do. By clearly establishing who you are, what you represent and what you stand for, you increase the chances of your customers buying from you.
-                            This is also something that can set you apart from your competitors. Without a website, it can be incredibly challenging to do this because people can't easily find quality and reliable information on your business.                        
-                        </div>
-                    </div>
-                </div>          
-                <div id="flip-tile-3of6" class="flip-tile opacity1">
-                    <div class="flip-tile-inner">
-                        <div class="flip-tile-front">
-                            <img src="leads.jpeg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
-                            <h2>Leads</h2> 
-                        </div>
-                        <div class="flip-tile-back">
-                            <h3>Leads</h3> 
-                            Perhaps one of the most intriguing reasons to have a website for your business is because it can increase your chances of getting leads.
-                            Once people find you online, become interested in your product or service and want to know more, they'll know how to contact you thanks to the information on your website, which gives you the opportunity to increase your sales. Even though websites have a cost, when used correctly, they have a positive ROI.
-                        </div>
-                    </div>
-                </div>
-                <div id="flip-tile-4of6" class="flip-tile opacity1">
-                    <div class="flip-tile-inner">
-                        <div class="flip-tile-front">
-                            <img src="organic-traffic.jpg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
-                            <h2>Organic Traffic </h2> 
-                        </div>
-                        <div class="flip-tile-back">
-                            <h3>Organic Traffic </h3> 
-                            Once you're online and have an SEO-optimized website, you have a chance of showing up in Google search results. This means that when people are searching for a product or service, there is a chance your website will show up in the results. This gives you the opportunity to drastically increase your customer base.                        
-                        </div>
-                    </div>
-                </div>
-                <div id="flip-tile-5of6" class="flip-tile opacity1">
-                    <div class="flip-tile-inner">
-                        <div class="flip-tile-front">
-                            <img src="time-equals-money.jpeg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
-                            <h2>Saving You Time + Customer Service</h2> 
-                        </div>
-                        <div class="flip-tile-back">
-                            <h3>Saving You Time + Customer Service</h3> 
-                            Many businesses get calls from prospects or existing customers asking simple questions about location and hours of operation. If you miss a call, the customer is left unhappy. Calls can also distract your staff from focusing on the most important parts of your business. A website can reduce these calls and increase internal productivity. At the same time, it helps customers find useful information without needing to call, which ultimately provides an all-around better user experience.
-                        </div>
-                    </div>
-                </div>
-                <div id="flip-tile-6of6" class="flip-tile opacity1">
-                    <div class="flip-tile-inner">
-                        <div class="flip-tile-front">
-                            <img src="updates-and-announcements.jpg" alt="Avatar" style="width:95%;height:auto;padding-top:5px;">
-                            <h2>Updates And Announcements</h2> 
-                        </div>
-                        <div class="flip-tile-back">
-                            <h3>Updates And Announcements</h3> 
-                            Since your website is on 24/7, it's easy to post updates and announcements to your customers. It's a way to keep them up to date on everything that you're doing. When something is particularly relevant to them, it increases the chance of you being able to upsell them.
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        <!-- </section> -->
+        <!-- <div id="net-it-aus-addin" class="css-animations"></div> -->
 
-        <div class="grid-area-class">
+        <header id="header">
+            <br>
+            <h1 style="font-size:3em;margin-bottom:0px; padding-bottom:0px;">Cross Country Tours</h1>
+            <h4>Invoice Capture Portal</h4>
+            <br>
+        </header>
 
-            <!-- <div class="grid-item area-02">
+        <!-- <span style="text-align: center;background-color: chartreuse;">multi-user version</span> -->
+
+        <main>
+
+            <section id="sectionConnect">
+
+                <!-- <form id="connection">
+                    <label for="connectionEmailAddress">Email address</label>
+                    <input id="connectionEmailAddress" type="text">
+                </form>
+                <br> -->
+
+            </section>
+
+            <section id="sectionInvoiceCapture">
+
+                <!-- <div id="invoiceDetails" class="invoiceDetails">
+
+                    <h3>Invoice Details</h3>
+
+                    <label for="supplierName">Supplier name</label>
+                    <input id="supplierName" type="text">
+                    <br>
+
+                    <label for="supplierABN">Supplier ABN</label>
+                    <input id="supplierABN" type="text">
+                    <br>
+
+                    <label for="poNumber">Purchase Order number (optional)</label>
+                    <input id="poNumber" type="text">
+                    <br>
+
+                    <label for="invoiceDate">Invoice Date</label>
+                    <input id="invoiceDate" type="date">
+                    <br>
+
+                    <label for="invoiceNumber">Invoice number</label>
+                    <input id="invoiceNumber" type="text">
+                    <br>
+                    
+                    <label for="dueDate">Due date (optional)</label>
+                    <input id="dueDate" type="date">
+                    <br>
+                    
+                    <div>
+                        <h3>Line items</h3>
+                        <button class="button-click-scale-and-wobble" onclick="addInvoiceLineItem()">Add another line item</button>
+                    </div>
+                    <div id="invoiceLineItems" class="invoiceLineItems">                        
+                        <div id="invoiceLineItem0" class="invoiceLineItem">
+                            <input id="invoiceLineItem_description0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_description" value="Description">
+                            <input id="invoiceLineItem_amount0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_amount" value="Amount">
+                            <input id="invoiceLineItem_tourNumber0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_tourNumber" value="Tour #">
+                        </div>
+                        <div id="invoiceLineItem1" class="invoiceLineItem">
+                            <input id="invoiceLineItem_description1" type="text" class="invoiceLineItem_description">
+                            <input id="invoiceLineItem_amount1" type="text" class="invoiceLineItem_amount">
+                            <input id="invoiceLineItem_tourNumber1" type="text" class="invoiceLineItem_tourNumber">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="documentUpload">
+
+                </div> -->
+
+            </section>
+
+            <section id="sectionDocumentsUpload">
+                <!-- <div class="files-upload">
+                    <input type="file" id="files-input" multiple>
+                    <label for="files-input">Choose Files</label>
+                    <div id="files-preview"></div>
+                    <div id="progress-container">
+                        <div id="progress-bar">0%</div>
+                    </div>
+                    <button id="send-email">Send Email</button>
+                </div>
+
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div id="invoiceDetails" class="invoiceDetails">
+
+                        <h3>Invoice Details</h3>
+    
+                        <label for="supplierName">Supplier name</label>
+                        <input id="supplierName" type="text">
+                        <br>
+    
+                        <label for="supplierABN">Supplier ABN</label>
+                        <input id="supplierABN" type="text">
+                        <br>
+    
+                        <label for="poNumber">Purchase Order number (optional)</label>
+                        <input id="poNumber" type="text">
+                        <br>
+    
+                        <label for="invoiceDate">Invoice Date</label>
+                        <input id="invoiceDate" type="date">
+                        <br>
+    
+                        <label for="invoiceNumber">Invoice number</label>
+                        <input id="invoiceNumber" type="text">
+                        <br>
+                        
+                        <label for="dueDate">Due date (optional)</label>
+                        <input id="dueDate" type="date">
+                        <br>
+                        
+                        <div>
+                            <h3>Line items</h3>
+                            <button class="button-click-scale-and-wobble" onclick="addInvoiceLineItem()">Add another line item</button>
+                        </div>
+                        <div id="invoiceLineItems" class="invoiceLineItems">                        
+                            <div id="invoiceLineItem0" class="invoiceLineItem">
+                                <input id="invoiceLineItem_description0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_description" value="Description">
+                                <input id="invoiceLineItem_amount0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_amount" value="Amount">
+                                <input id="invoiceLineItem_tourNumber0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_tourNumber" value="Tour #">
+                            </div>
+                            <div id="invoiceLineItem1" class="invoiceLineItem">
+                                <input id="invoiceLineItem_description1" type="text" class="invoiceLineItem_description">
+                                <input id="invoiceLineItem_amount1" type="text" class="invoiceLineItem_amount">
+                                <input id="invoiceLineItem_tourNumber1" type="text" class="invoiceLineItem_tourNumber">
+                            </div>
+                        </div>
+    
+                        <label for="files">Select files to upload. (...no mor ethan 10!)</label><br>
+                        <input type="file" id="files" name="files" multiple><br>
+                        <button id="uploadFormButton" type="submit">Upload Files</button>
+
+                    </div>
+                </form>
+                 -->
+                
+            </section>
+
+            <section id="sectionInvoiceSubmit">
+
+                <!-- supplierConnect START -->
+                <div id="supplierConnect">
+                    <h3>Supplier Connect</h3>
+                    <form id="supplierConnectEmail">
+                            <label for="supplierEmail">Email address</label>
+                            <input id="supplierEmail" name="supplierEmail" class="supplierConnectTableCell" type="email" size_="30" required >
+                            <br>
+                            <button id="supplierEmailButton" class="button">Submit</button></td><td>
+                    </form>
+                    <form id="supplierConnectCode">
+                            <label for="supplierCode" class="supplierConnectTableCell">Connection code</label>
+                            <input id="supplierCode" name="supplierCode" class="supplierConnectTableCell" type="text" required>
+                            <br>
+                            <button id="supplierCodeButton" class="button">Submit</button></td><tr>
+                    </form>
+                </div>
+                <!-- supplierConnect END -->
+
+                <form id="uploadForm" enctype="multipart/form-data">
+
+                    <div id="invoiceDetails" class="invoiceDetails">
+
+                        <h3>Invoice Details</h3>
+    
+                        <label for="supplierName">Supplier name</label>
+                        <br>
+                        <input id="supplierName" name="supplierName" type="text">
+                        <br>
+        
+                        <label for="supplierABN">Supplier ABN</label>
+                        <br>
+                        <input id="supplierABN" name="supplierABN" type="text">
+                        <br>
+    
+                        <label for="poNumber">Purchase Order number (optional)</label>
+                        <br>
+                        <input id="poNumber" name="poNumber" type="text">
+                        <br>
+    
+                        <label for="invoiceDate">Invoice Date</label>
+                        <br>
+                        <input id="invoiceDate" name="invoiceDate" type="date">
+                        <br>
+    
+                        <label for="invoiceNumber">Invoice number</label>
+                        <br>
+                        <input id="invoiceNumber" name="invoiceNumber" type="text">
+                        <br>
+                        
+                        <label for="dueDate">Due date (optional)</label>
+                        <br>
+                        <input id="dueDate" name="dueDate" type="date">
+                        <br>
+
+                        <div>
+                            <h3>Line items</h3>
+                            <div class="button" onclick="addInvoiceLineItem()">Add another line item</div>
+                        </div>
+                        <div id="invoiceLineItems" class="invoiceLineItems">                        
+                            <div id="invoiceLineItem0" class="invoiceLineItem">
+                                <input id="invoiceLineItem_description0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_description" value="Description">
+                                <input id="invoiceLineItem_amount0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_amount" value="Amount">
+                                <input id="invoiceLineItem_tourNumber0" disabled readonly type="text" class="invoiceLineItemHeader invoiceLineItem_tourNumber" value="Tour #">
+                            </div>
+                            <div id="invoiceLineItem1" class="invoiceLineItem">
+                                <input id="invoiceLineItem_description1" name="invoiceLineItem_description1" type="text" class="invoiceLineItem_description">
+                                <input id="invoiceLineItem_amount1" name="invoiceLineItem_amount1" type="text" class="invoiceLineItem_amount">
+                                <input id="invoiceLineItem_tourNumber1" name="invoiceLineItem_tourNumber1" type="text" class="invoiceLineItem_tourNumber">
+                            </div>
+                        </div>
+    
+                        <!-- <label for="files">Select files to upload. (...no mor ethan 10!)</label><br>
+                        <input type="file" id="files" name="files" multiple><br>
+                        <button id="uploadFormButton" type="submit">Upload Files</button> -->
+
+                    </div>
+
+                    <label class="labelForInputTypeFile" for="myFiles">Select files (max 10)</label>
+                    <input class="inputTypeFile" type="file" id="myFiles" accept=".xls,.xlsx,.xlsb,.xlsm,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple>
+                    <div id="uploadFormSubmit" class="button">Submit</div>
+                    <p id="uploadStatus">...</p>
+                    <p id="uploadMessage">...</p>
+
+                </form>
+
+            </section>
+
+        </main>
+        <footer id="footer">
+            <div id="footer-grid" class="footer-grid">
+                <div class="footer-grid-item">
+                </div>
+                <div class="footer-grid-item">
+                </div>
+                <div class="footer-grid-item">
+                </div>
+                <div class="footer-grid-item">
+                </div>
+                <div class="footer-grid-item">
+                    <h4>&copy Cross Country Tours</h4>
+                    <h5>Portal provided by Net IT Australia</h5>
+                </div>
+                <!--<div class="footer-grid-item footer-logo-hda-image-wrapper">
+                    <img src="./media-partial/logo-hda.svg" alt="logo-hda-image" class="footer-logo-hda-image" > 
+                </div>
+                <div class="footer-grid-item footer-logo-nhsd-image-wrapper">
+                    <img src="./media-partial/logo-nhsd.svg" alt="logo-nhsd-image" class="footer-logo-nhsd-image" > 
+                </div>
+                <div class="footer-grid-item footer-optometry-australia-icon-only-image-wrapper">
+                    <img src="./media-partial/optometry-australia-icon-only.png" alt="optometry-australia-icon-only-image" class="footer-optometry-australia-icon-only-image" > 
+                </div> -->
             </div>
-
-            <div class="grid-item area-03">
-            </div>
-
-            <div class="grid-item area-04">
-            </div>
-
-            <div class="grid-item area-05">
-            </div> -->
-
-        </div>
-
-    </main>
-
-</div>
-
-<footer>
-    <div class="footer-wrapper">
-        <div id="copyright-notice">
-        </div>
-        <div>
-            <span class="material-icons material-icons" style="white-space:nowrap;">sms</span><br>+61 458 451 430<br>( SMS only )
-        </div>
-        <div>
-            <span class="material-icons material-icons">mail</span><br>Contact us now.<br><a href="mailto:contact@netit.com.au" style="text-decoration:none;color:aqua;">contact@netit.com.au</a>
-        </div>        
-    </div>
-    <!-- SEO -->
-        <h1 class="mySEOelement">Web Developer.  Web Sites.  Web Apps.  Web Applications.  Net IT Australia.</h1>
-        <a  class="mySEOelement" href="https://www.netit.au"></a>
-        <a  class="mySEOelement" href="https://netit.au"></a>
-        <a  class="mySEOelement" href="https://www.netit.com.au"></a>
-        <a  class="mySEOelement" href="https://netit.com.au"></a>
-        <a  class="mySEOelement" href="https://www.netitAustralia.com"></a>
-        <a  class="mySEOelement" href="https://netitAustralia.com"></a>
-        <a  class="mySEOelement" href="https://www.runclub.net.au"></a>
-        <a  class="mySEOelement" href="https://runclub.net..au"></a>
-        <a  class="mySEOelement" href="https://www.ridesharedriver.com.au"></a>
-        <a  class="mySEOelement" href="https://ridesharedriver.com.au"></a>
-        <a  class="mySEOelement" href="https://www.xlaccounts.com.au"></a>
-        <a  class="mySEOelement" href="https://xlaccounts.com.au"></a>
-    <!-- SEO -->
-</footer>
-
-    <script>
-
-        populateCopyrightNotice();
-
-    </script>
-
-</body>
-</html>
+        </footer>
+        <br>
+    </body>
+    </html>
