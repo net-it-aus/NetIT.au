@@ -56,6 +56,7 @@ window.addEventListener("load", () => {
             })
             .then((res_data) => {
                 console.log(res_data);
+                console.log(res_data.message);
                 if (res_data.message==="codes match"){
                     document.getElementById("uploadForm").style.display = "block";
                     // document.getElementById("supplierConnect").style.display = "none";
@@ -69,6 +70,14 @@ window.addEventListener("load", () => {
             });
         }
         supplierConnectCode(email,code);
+    });
+
+    document.getElementById("myFiles").addEventListener("change",function(event) {
+        const filesList = document.getElementById("myFiles").files;
+        // document.getElementById("filesList").innerHTML = ``;
+        for(i = 0;i < filesList.length;i++){
+            document.getElementById("filesList").innerHTML += `${filesList[i].name}<br>`;
+        }
     });
 
     const myForm = document.getElementById("uploadForm");
@@ -105,13 +114,12 @@ window.addEventListener("load", () => {
                 }
 
         // const url = 'http://localhost:2070/upload';
-        const url = 'http://netit.com.au/upload';
+        const url = 'https://netit.com.au/upload';
         const response = await fetch(url,{
             method:'POST',
-            headers: {
-                'Access-Control-Allow-Origin',
-
-            },
+            // headers: {
+            //     'Access-Control-Allow-Origin',
+            // },
             body: formData
         });
 
