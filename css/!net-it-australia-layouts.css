@@ -1,0 +1,144 @@
+/* DISPLAY GRID */
+.grid-1fr{
+    grid-template-columns: 1fr;}
+.grid-fill-200px-33percent{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,33%));}
+.grid-fit-200px-33percent{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,33%));}
+.grid-fill-320px-33percent{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px,33%));}
+.grid-fit-320px-33percent{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,33%));}
+.grid-fill-610px-1fr{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(610px,1fr));}
+.grid-fit-610px-1fr{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(610px,1fr));}
+.grid-fill-33percent-1fr{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));}
+.grid-fit-33percent-1fr{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));}
+/* DISPLAY GRID */
+
+/* DISPLAY FLEX */
+
+/* DISPLAY FLEX */
+
+.grid-gap-0px{
+    grid-gap:0px;}
+.grid-gap-5px{
+    grid-gap:5px;}
+.grid-gap-10px{
+    grid-gap:10px;}
+.grid-gap-20px{
+    grid-gap:20px;}
+
+/* ALIGN ITEMS INSIDE GRID */
+.grid-item-center-with-flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;}
+.grid-item-center-with-grid{
+    display: grid;
+    align-items: center;
+    justify-items: center;}
+.grid-item-img-center-with-flex > img{
+    /* display: flex; */
+    margin:auto;} /* NEEDS TO BE PLACED ON THE ELEMENTS WITHIN THE GRID ITEM */
+.grid-item-span-center-with-flex > span{
+    /* display: flex; */
+    margin:auto;} /* NEEDS TO BE PLACED ON THE ELEMENTS WITHIN THE GRID ITEM */
+.grid-text-align-center{
+    text-align: center;}
+.grid-item-text-align-center{
+    position:relative;
+    text-align: center;}
+    /* center content - solution 1 */
+        /* https://www.w3docs.com/snippets/css/how-to-center-the-content-in-grid.html */
+        /* display:flex;
+        align-items: center;
+        justify-content: center; */
+    /* center content - solution 1 */
+    /* center content - solution 2 */
+        /* https://www.w3docs.com/snippets/css/how-to-center-the-content-in-grid.html */
+        /* display: grid;
+        align-items: center;
+        justify-items: center; */
+    /* center content - solution 2 */
+    /* center content - solution 3 */
+        /* https://www.w3docs.com/snippets/css/how-to-center-the-content-in-grid.html */
+        /* display: flex; */
+        /* span {
+            margin:auto; NEEDS TO BE PLACED ON THE ELEMENTS WITHIN THE GRID ITEM
+        } */
+    /* center content - solution 3 */
+    /* center content - solution 5 */
+        /* https://www.w3docs.com/snippets/css/how-to-center-the-content-in-grid.html */
+        /* position: relative;
+        text-align: center; */
+    /* center content - solution 5 */
+/* ALIGN ITEMS INSIDE GRID */
+
+/* ALIGN FIXED ELEMENTS */
+.fixed-element-center-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* max-width: (--fecs-width,50%) */
+    /* METHOD 1 */
+        /* Negative half of height. */
+            /* margin-top: -100px;   */
+        /* Negative half of width. */
+            /* margin-left: -250px;   */
+    /* METHOD 2 */
+    transform: translate(-50%, -50%);
+}
+/* ALIGN FIXED CONTENT */
+
+
+.user-select-none{
+    user-select: none;}
+
+.hide-off-screen{
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;}
+
+.white-space-no-wrap{
+    white-space: nowrap;
+}
+
+/* SPLASH TEXT */
+.splash-text{
+    margin:auto;
+    opacity: 1;
+    text-align: center;
+    padding: 10px;
+    pointer-events: none;
+
+    animation-name:splashText;
+    animation-duration:1s;
+    /* animation-timing-function:; */
+    animation-delay:.1s;
+    /* animation-iteration-count:; */
+    /* animation-direction:; */
+    animation-fill-mode:forwards;
+}
+@keyframes splashText {
+    from {
+        transform:scale(0);
+        /* opacity:0; */
+    }
+    to {
+        transform:scale(1);
+        /* opacity:1; */
+    }
+}
+/* SPLASH TEXT */

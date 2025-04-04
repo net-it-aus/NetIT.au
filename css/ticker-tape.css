@@ -1,0 +1,76 @@
+:root {
+    /* use js > screen.innerwidh - 100px */
+    --screen-width: calc(1223px - 100px);
+    /* use js > screen.innerwidh - 100px */
+    --ticker-width: calc(-1223px + 100px);
+    --ticker-duration: 20s;
+}
+.ticker-tape-text{
+    /* white-space: nowrap; */
+    display:inline-block;
+    /* text-align:start; */
+    /* left:0; */
+    /* overflow:; */
+    color:orange;
+}
+.ticker-tape{
+    display:flex;
+    /* flex-direction: row-reverse; */
+    border:1px solid yellow;
+    /* justify-content: center; */
+    margin: auto;
+    overflow: hidden;
+}
+.ticker-tape-char{
+    position:relative;
+    flex-wrap: nowrap;
+    width:1rem;
+    height:1.4rem;
+    flex-shrink: 0;
+    border:1px solid chartreuse;
+}
+.ticker-tape-char > div {
+    position:absolute;
+    width:1rem;
+    height:1.4rem;
+    /* aspect-ratio: 1/1; */
+    color:aquamarine;
+    border:1px solid aqua;
+    text-align:center;
+}
+.ticker-tape-animation{
+    /* left:0; */
+    /* height:1rem; */
+    /* width:auto; */
+    /* border:1px solid yellow; */
+    white-space: nowrap;
+    overflow: hidden;
+    animation:tickerTape var(--ticker-speed) linear infinite; 
+    animation-delay: 1s;
+
+
+    animation-name:tickerTape;
+    animation-duration:var(--ticker-duration);
+    animation-delay:300ms;
+    animation-iteration-count:infinite;
+    /* animation-direction:alternate; */
+    animation-timing-function:linear;
+    /* animation-fill-mode:none; */
+    /* animation-play-state:running; */
+
+}
+/* Safari */
+@-webkit-keyframes tickerTape {
+    /* 0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); } */
+    0% { transform: translateX(var(--screen-width)); }
+    100% { transform: translateX(var(--ticker-width)); }
+}
+  
+@keyframes tickerTape {
+    /* 0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); } */
+    0% { transform: translateX(var(--screen-width)); }
+    100% { transform: translateX(var(--ticker-width)); }
+}
+  

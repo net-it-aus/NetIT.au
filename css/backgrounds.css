@@ -1,0 +1,113 @@
+.diagonal-1{
+    color:navy;
+    padding:30px;
+    position: relative;
+    margin:2rem;
+    /* related to z-index on the pseudo element */
+        isolation: isolate;
+    /* related to z-index on the pseudo element */
+}
+.diagonal-1:after{
+    content:'';
+    background-image: linear-gradient(45deg,rgb(100, 240, 240),rgb(230, 80, 230),orange);
+    position:absolute;
+    /* inset is shorthand for top, right, bottom, left */
+       inset: 0;
+    /* inset is shorthand for top, right, bottom, left */
+    transform:skewY(-2deg);
+    border-radius: 2%;
+    z-index: -1;
+}
+
+.polygon-1{
+    color:navy;
+    padding:30px;
+    position: relative;
+    margin:2rem;
+    /* related to z-index on the pseudo element */
+        isolation: isolate;
+    /* related to z-index on the pseudo element */
+}
+.polygon-1:after{
+    content:'';
+    background-image: linear-gradient(45deg,orangered,yellow,orange);
+    position:absolute;
+    /* inset is shorthand for top, right, bottom, left */
+       inset: 0;
+    /* inset is shorthand for top, right, bottom, left */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 100% 0%, 50% 100%, 0% 50%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 50% 90%, 100% 100%, 100% 0%, 50% 20%, 0% 0%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    z-index: -1;
+}
+.polygon-2{
+    color:navy;
+    padding:30px;
+    position: relative;
+    margin:2rem;
+    /* related to z-index on the pseudo element */
+        isolation: isolate;
+    /* related to z-index on the pseudo element */
+}
+.polygon-2:after{
+    content:'';
+    background-image: linear-gradient(45deg,green,lightgreen,seagreen);
+    position:absolute;
+    /* inset is shorthand for top, right, bottom, left */
+       inset: 0;
+    /* inset is shorthand for top, right, bottom, left */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 50% 90%, 100% 100%, 100% 0%, 50% 20%, 0% 0%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 100% 0%, 50% 100%, 0% 50%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    z-index: -1;
+    opacity: .5;
+}
+.polygon-3{
+    color:navy;
+    padding:30px;
+    position: relative;
+    margin:2rem;
+    /* related to z-index on the pseudo element */
+        isolation: isolate;
+    /* related to z-index on the pseudo element */
+}
+.polygon-3:after{
+    content:'';
+    background-image: linear-gradient(45deg,green,lightgreen,seagreen);
+    position:absolute;
+    /* inset is shorthand for top, right, bottom, left */
+       inset: 0;
+    /* inset is shorthand for top, right, bottom, left */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 100% 0%, 50% 100%, 0% 50%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 50% 90%, 100% 100%, 100% 0%, 50% 20%, 0% 0%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+        clip-path: polygon(0% 100%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: polygon( top left x y,  top right x y, bottom right x y, bottom left x y) */
+    z-index: -1;
+    opacity: .5;
+}
+.wavy-1{
+    background-image: linear-gradient(45deg,chartreuse,blue);
+    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+    background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+    background: radial-gradient(ellipse at top, #e66465, transparent),           
+                radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+    background: radial-gradient(ellipse at top, #e66465),           
+                radial-gradient(ellipse at bottom, #4d9f0c);
+}

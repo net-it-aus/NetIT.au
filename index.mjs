@@ -44,7 +44,8 @@ console.log('total memory:- ',os.totalmem()/1000000000);
 console.log('free memory:- ',os.freemem()/1000000000);
 
 console.log(Date().slice(0,25));
-  app.listen( process.env.PORT || v_portNumber, () => { 
+
+app.listen( process.env.PORT || v_portNumber, () => { 
   console.log('netIT.com.au server is listening at port ' + v_portNumber + '\n');
 });
 
