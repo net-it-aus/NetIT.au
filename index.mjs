@@ -1,3 +1,14 @@
+    function consoleTrace() {
+        try {
+            const stack = new Error().stack;
+            const firstLine = stack.split('\n')[2].trim();
+            return `Trace line: ${firstLine}`;
+        } catch (error) {
+            return 'Trace line: not available';
+        }
+    };
+    console.log(consoleTrace());
+
 const aWeekDayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const aMonthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 //  set the port number for the server
@@ -42,15 +53,17 @@ import nodeoutlook from 'nodejs-nodemailer-outlook';
 // const os = require('os');
 console.log('total memory:- ',os.totalmem()/1000000000);
 console.log('free memory:- ',os.freemem()/1000000000);
-
+console.log(consoleTrace());
 console.log(Date().slice(0,25));
 
 app.listen( process.env.PORT || v_portNumber, () => { 
   console.log('netIT.com.au server is listening at port ' + v_portNumber + '\n');
 });
+console.log(consoleTrace());
 
 // SERVER REQUESTS LOG start
-app.all('*', (req, res) => {
+app.use('/', (req, res) => {
+    console.log(consoleTrace());
     console.log('/////////////// app.all information START');
     const v_ipAddress = req.connection.remoteAddress;
     const v_ipAddressForwarded = req.headers['x-forwarded-for'];
