@@ -8,10 +8,14 @@
   "author": "Donald Garton",
   "license": "UNLICENSED",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "express-session": "^1.18.1",
     "node-fetch": "^3.3.2",
     "nodejs-nodemailer-outlook": "^1.2.4",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "sqlite3": "^5.1.7"
   },
   "description": "NetIT.au - Express",
   "repository": {
@@ -22,8 +26,14 @@
     "url": "https://github.com/net-it-aus/NetIT.au-express/issues"
   },
   "homepage": "https://github.com/net-it-aus/NetIT.au-express#readme",
-  "keywords": ["express", "netitau", "nodejs", "web-development"],
+  "keywords": [
+    "express",
+    "netitau",
+    "nodejs",
+    "web-development"
+  ],
   "engines": {
     "node": ">=14.0.0"
-  }
+  },
+  "devDependencies": {}
 }
